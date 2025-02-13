@@ -1,15 +1,15 @@
-import abstract_factory
+from .abstract_factory import abstractFactory
 from components import word00Button, word00Textbox, word00Panel
 
 
-class word00_factory(abstract_factory):
+class word00_factory(abstractFactory):
     _instance = None #have class level variable For Singleton
     _instance_count = 0 #have class level variable to keep track of count of instances!
 
     def __new__(cls):
         
         if cls._instance_count >= 2:
-            print("Error: Word00Factory cannot be instantiated more than twice.")
+            print("Warning: Word00Factory cannot be instantiated more than twice.")
             return None  # Prevents creation of a new instance
 
         if cls._instance is None:
