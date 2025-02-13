@@ -1,33 +1,33 @@
 import abstract_factory
-from components import word90Button, word90Textbox, word90Panel
+from components import word10Button, word10Textbox, word10Panel
 
 
-class word90_factory(abstract_factory):
+class word10_factory(abstract_factory):
     _instance = None #have class level variable For Singleton
     _instance_count = 0 #have class level variable to keep track of count of instances!
 
     def __new__(cls):
         
         if cls._instance_count >= 2:
-            print("Error: Word90Factory cannot be instantiated more than twice.")
+            print("Error: Word10Factory cannot be instantiated more than twice.")
             return None  # Prevents creation of a new instance
 
         if cls._instance is None:
-            cls._instance = super(word90_factory, cls).__new__(cls)
+            cls._instance = super(word10_factory, cls).__new__(cls)
         
         cls._instance_count += 1
         return cls._instance
     
     def createButton(self):
 
-        return word90Button()
+        return word10Button()
     
     def createTextbox(self):
 
-        return word90Textbox()
+        return word10Textbox()
     
     def createPanel(self):
         
-        return word90Panel()
+        return word10Panel()
 
 
