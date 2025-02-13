@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class abstract_GUI(ABC):
+class AbstractGUI(ABC):
     
     @abstractmethod
     def testComponent(self):
