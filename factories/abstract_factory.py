@@ -2,14 +2,17 @@ from abc import ABC, abstractmethod
 
 class abstract_factory(ABC):
 
+    """Abstract class to create the different factories off of. Has methods to create the different UI components"""
+
     @abstractmethod
-    def createButton():
+    def createButton(self):
         pass #abstract method so dont implement here!
     
     @abstractmethod
-    def createPanel():
+    def createPanel(self):
         pass #abstract method so dont implement here!
     
     @abstractmethod
-    def createTextbox():
+    def createTextbox(self):
         pass #abstract method so dont implement here!
+
