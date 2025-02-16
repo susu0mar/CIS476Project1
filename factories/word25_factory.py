@@ -9,7 +9,7 @@ class word25_factory(abstractFactory):
     def __new__(cls):
         
         if cls._instance_count >= 2:
-            print("Warning: Word25Factory cannot be instantiated more than twice.")
+            print("Warning: Word25Factory cannot be instantiated more than twice.\n")
             return None  # Prevents creation of a new instance
 
         if cls._instance is None:
